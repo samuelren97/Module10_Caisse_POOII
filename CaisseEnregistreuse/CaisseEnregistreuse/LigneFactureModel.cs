@@ -31,7 +31,7 @@ namespace CaisseEnregistreuse
             }
         }
 
-        public decimal m_prixUnitaire;
+        private decimal m_prixUnitaire;
         public decimal PrixUnitaire
         {
             get
@@ -44,6 +44,7 @@ namespace CaisseEnregistreuse
                 {
                     throw new ArgumentOutOfRangeException(nameof(value));
                 }
+                this.m_prixUnitaire = value;
             }
         }
         
@@ -53,6 +54,12 @@ namespace CaisseEnregistreuse
             {
                 return this.PrixUnitaire * this.Quantite;
             }
+        }
+
+        public override string ToString()
+        {
+            return this.Description + "       " + this.Quantite.ToString() + 
+                " @ " + this.PrixUnitaire.ToString() + " $";
         }
     }
 }

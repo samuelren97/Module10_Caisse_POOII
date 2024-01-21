@@ -28,32 +28,36 @@
         /// </summary>
         private void InitializeComponent()
         {
-            tbSaisie = new TextBox();
+            tbDescription = new TextBox();
             SuspendLayout();
             // 
-            // tbSaisie
+            // tbDescription
             // 
-            tbSaisie.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbSaisie.Location = new Point(12, 12);
-            tbSaisie.Name = "tbSaisie";
-            tbSaisie.Size = new Size(717, 27);
-            tbSaisie.TabIndex = 0;
+            tbDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            tbDescription.Enabled = false;
+            tbDescription.Location = new Point(10, 9);
+            tbDescription.Margin = new Padding(3, 2, 3, 2);
+            tbDescription.Name = "tbDescription";
+            tbDescription.Size = new Size(628, 23);
+            tbDescription.TabIndex = 0;
             // 
             // fClient
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(738, 52);
-            Controls.Add(tbSaisie);
-            MinimumSize = new Size(756, 99);
+            ClientSize = new Size(648, 45);
+            Controls.Add(tbDescription);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(664, 84);
             Name = "fClient";
             Text = "Écran client";
+            Load += fClient_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
 
-        private TextBox tbSaisie;
+        private TextBox tbDescription;
     }
 }

@@ -40,6 +40,7 @@
             lQuantite = new Label();
             tbDescription = new TextBox();
             lDescription = new Label();
+            bPayer = new Button();
             ((System.ComponentModel.ISupportInitialize)dgvArticles).BeginInit();
             gbScanner.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)nudPrix).BeginInit();
@@ -49,9 +50,9 @@
             // lArticles
             // 
             lArticles.AutoSize = true;
-            lArticles.Location = new Point(12, 9);
+            lArticles.Location = new Point(10, 7);
             lArticles.Name = "lArticles";
-            lArticles.Size = new Size(61, 20);
+            lArticles.Size = new Size(49, 15);
             lArticles.TabIndex = 0;
             lArticles.Text = "Articles:";
             // 
@@ -61,21 +62,22 @@
             dgvArticles.AllowUserToDeleteRows = false;
             dgvArticles.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             dgvArticles.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvArticles.Location = new Point(12, 32);
+            dgvArticles.Location = new Point(12, 28);
+            dgvArticles.Margin = new Padding(3, 2, 3, 2);
             dgvArticles.Name = "dgvArticles";
             dgvArticles.ReadOnly = true;
             dgvArticles.RowHeadersWidth = 51;
             dgvArticles.RowTemplate.Height = 29;
-            dgvArticles.Size = new Size(815, 322);
+            dgvArticles.Size = new Size(713, 242);
             dgvArticles.TabIndex = 1;
             // 
             // lTotal
             // 
             lTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             lTotal.AutoSize = true;
-            lTotal.Location = new Point(654, 363);
+            lTotal.Location = new Point(577, 277);
             lTotal.Name = "lTotal";
-            lTotal.Size = new Size(42, 20);
+            lTotal.Size = new Size(32, 15);
             lTotal.TabIndex = 2;
             lTotal.Text = "Total";
             // 
@@ -83,10 +85,12 @@
             // 
             tbTotal.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             tbTotal.Enabled = false;
-            tbTotal.Location = new Point(702, 360);
+            tbTotal.Location = new Point(615, 274);
+            tbTotal.Margin = new Padding(3, 2, 3, 2);
             tbTotal.Name = "tbTotal";
-            tbTotal.Size = new Size(125, 27);
+            tbTotal.Size = new Size(110, 23);
             tbTotal.TabIndex = 3;
+            tbTotal.TextAlign = HorizontalAlignment.Right;
             // 
             // gbScanner
             // 
@@ -98,9 +102,11 @@
             gbScanner.Controls.Add(lQuantite);
             gbScanner.Controls.Add(tbDescription);
             gbScanner.Controls.Add(lDescription);
-            gbScanner.Location = new Point(12, 390);
+            gbScanner.Location = new Point(10, 330);
+            gbScanner.Margin = new Padding(3, 2, 3, 2);
             gbScanner.Name = "gbScanner";
-            gbScanner.Size = new Size(815, 97);
+            gbScanner.Padding = new Padding(3, 2, 3, 2);
+            gbScanner.Size = new Size(713, 76);
             gbScanner.TabIndex = 4;
             gbScanner.TabStop = false;
             gbScanner.Text = "Simulateur scanner";
@@ -108,9 +114,10 @@
             // bSimuler
             // 
             bSimuler.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            bSimuler.Location = new Point(715, 62);
+            bSimuler.Location = new Point(626, 46);
+            bSimuler.Margin = new Padding(3, 2, 3, 2);
             bSimuler.Name = "bSimuler";
-            bSimuler.Size = new Size(94, 29);
+            bSimuler.Size = new Size(82, 22);
             bSimuler.TabIndex = 6;
             bSimuler.Text = "Simuler";
             bSimuler.UseVisualStyleBackColor = true;
@@ -119,67 +126,83 @@
             // nudPrix
             // 
             nudPrix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            nudPrix.Location = new Point(718, 23);
+            nudPrix.Location = new Point(628, 17);
+            nudPrix.Margin = new Padding(3, 2, 3, 2);
             nudPrix.Name = "nudPrix";
-            nudPrix.Size = new Size(91, 27);
+            nudPrix.Size = new Size(80, 23);
             nudPrix.TabIndex = 5;
             // 
             // lPrix
             // 
             lPrix.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lPrix.AutoSize = true;
-            lPrix.Location = new Point(679, 26);
+            lPrix.Location = new Point(594, 20);
             lPrix.Name = "lPrix";
-            lPrix.Size = new Size(33, 20);
+            lPrix.Size = new Size(27, 15);
             lPrix.TabIndex = 4;
             lPrix.Text = "Prix";
             // 
             // nudQuantite
             // 
             nudQuantite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            nudQuantite.Location = new Point(597, 23);
+            nudQuantite.Location = new Point(522, 17);
+            nudQuantite.Margin = new Padding(3, 2, 3, 2);
             nudQuantite.Name = "nudQuantite";
-            nudQuantite.Size = new Size(61, 27);
+            nudQuantite.Size = new Size(53, 23);
             nudQuantite.TabIndex = 3;
             // 
             // lQuantite
             // 
             lQuantite.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             lQuantite.AutoSize = true;
-            lQuantite.Location = new Point(525, 25);
+            lQuantite.Location = new Point(459, 19);
             lQuantite.Name = "lQuantite";
-            lQuantite.Size = new Size(66, 20);
+            lQuantite.Size = new Size(53, 15);
             lQuantite.TabIndex = 2;
             lQuantite.Text = "Quantite";
             // 
             // tbDescription
             // 
             tbDescription.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            tbDescription.Location = new Point(102, 23);
+            tbDescription.Location = new Point(89, 17);
+            tbDescription.Margin = new Padding(3, 2, 3, 2);
             tbDescription.Name = "tbDescription";
-            tbDescription.Size = new Size(344, 27);
+            tbDescription.Size = new Size(302, 23);
             tbDescription.TabIndex = 1;
             // 
             // lDescription
             // 
             lDescription.AutoSize = true;
-            lDescription.Location = new Point(11, 26);
+            lDescription.Location = new Point(10, 20);
             lDescription.Name = "lDescription";
-            lDescription.Size = new Size(85, 20);
+            lDescription.Size = new Size(67, 15);
             lDescription.TabIndex = 0;
             lDescription.Text = "Description";
             // 
+            // bPayer
+            // 
+            bPayer.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            bPayer.Location = new Point(648, 302);
+            bPayer.Name = "bPayer";
+            bPayer.Size = new Size(75, 23);
+            bPayer.TabIndex = 5;
+            bPayer.Text = "Payer";
+            bPayer.UseVisualStyleBackColor = true;
+            bPayer.Click += bPayer_Click;
+            // 
             // fPrincipal
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(839, 491);
+            ClientSize = new Size(736, 415);
+            Controls.Add(bPayer);
             Controls.Add(gbScanner);
             Controls.Add(tbTotal);
             Controls.Add(lTotal);
             Controls.Add(dgvArticles);
             Controls.Add(lArticles);
-            MinimumSize = new Size(857, 538);
+            Margin = new Padding(3, 2, 3, 2);
+            MinimumSize = new Size(752, 454);
             Name = "fPrincipal";
             Text = "Écran principal";
             Load += fPrincipal_Load;
@@ -206,5 +229,6 @@
         private Label lPrix;
         private NumericUpDown nudPrix;
         private Button bSimuler;
+        private Button bPayer;
     }
 }

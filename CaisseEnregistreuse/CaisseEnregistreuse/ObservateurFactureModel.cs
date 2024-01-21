@@ -20,6 +20,7 @@ namespace CaisseEnregistreuse
             {
                 throw new ArgumentNullException(nameof(p_action));
             }
+            p_factureModel.Subscribe(this);
             this.m_action = p_action;
         }
 
